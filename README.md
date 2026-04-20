@@ -10,24 +10,7 @@
 
 **Mercari-Scraper** is an agentic shopping assistant that understands natural language queries, performs real-time web scraping on Mercari Japan, and provides reasoned product recommendations without any third-party framework overhead.
 
-## 🎬 Showcase Gallery
-| 🏠 Landing Page | 🔍 Search Results |
-| :---: | :---: |
-| ![Landing](https://raw.githubusercontent.com/ayushxx7/Mercari-Scraper/main/showcase/landing.png) | ![Search](https://raw.githubusercontent.com/ayushxx7/Mercari-Scraper/main/showcase/search.png) |
-
-## 📊 Repo Health: 95 / 100 (Excellent)
-This project is production-ready, highly documented, and follows modern agentic patterns.
-
-| Category | Item | Status | Score |
-| :--- | :--- | :--- | :--- |
-| **Documentation** | README, LICENSE, .env.example | ✅ Complete | 15 / 15 |
-| **Security** | Secret Scan & .gitignore | ✅ Secure | 15 / 15 |
-| **Automation** | setup.sh & Passing Tests | ✅ Working | 20 / 20 |
-| **Showcase** | High-res Assets | ⚠️ Pending | 15 / 20 |
-| **Distribution** | Live App & Professional Delivery | ✅ Distributed | 30 / 30 |
-
-## 🎯 Project Overview
-This project fully implements the Mercari Japan Shopping Assistant requirements:
+`✅ Verified Demo | ✅ Secure API Handling | ✅ MIT Licensed | ✅ TDD-Backed`
 
 ## 🏗 Architecture
 The project follows a modular agentic architecture, decoupling the UI from the scraping and reasoning engines.
