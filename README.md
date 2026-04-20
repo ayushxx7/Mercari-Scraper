@@ -29,6 +29,31 @@ This project is production-ready, highly documented, and follows modern agentic 
 ## 🎯 Project Overview
 This project fully implements the Mercari Japan Shopping Assistant requirements:
 
+## 🏗 Architecture
+The project follows a modular agentic architecture, decoupling the UI from the scraping and reasoning engines.
+
+```mermaid
+graph TD
+    A[Streamlit UI] --> B[Chat Assistant]
+    B --> C[Mercari Scraper]
+    B --> D[Product Ranker]
+    B --> E[LLM Service]
+    C --> F[(PostgreSQL)]
+    D --> F
+    E --> G[OpenAI GPT-4o]
+```
+
+### Core Components
+- **Frontend (`app.py`)**: Interactive Streamlit interface for real-time querying and visualization.
+- **Agent Engine (`core/`)**:
+    - `chat_assistant.py`: Orchestrates the flow between user intent and tool execution.
+    - `product_ranker.py`: Implements multi-criteria scoring for product recommendations.
+    - `llm_service.py`: High-level wrapper for OpenAI function calling and reasoning.
+- **Data Layer (`backend/`)**:
+    - `mercari_scraper.py`: Advanced Selenium/BS4 engine for real-time extraction.
+    - `database.py`: Robust PostgreSQL integration with SQLAlchemy for persistence.
+- **Utilities (`utils/`)**: Helper functions for translation and data formatting.
+
 1. **✅ Natural Language Understanding**: Intelligent query parsing and comprehension
 2. **✅ Real Web Scraping**: Direct integration with Mercari Japan
 3. **✅ Product Recommendations**: Smart filtering and ranking system
